@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Jfcs Plug-in
+Bundle-SymbolicName: cn.edu.jfcs; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: xc.sang
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui.intro,
+ org.eclipse.core.runtime,
+ org.eclipse.ui
+Eclipse-LazyStart: true
