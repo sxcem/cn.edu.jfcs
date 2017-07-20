@@ -1,5 +1,7 @@
 package cn.edu.jfcs.app;
 
+import org.eclipse.ui.IWorkbenchPreferenceConstants;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.application.IWorkbenchConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;
@@ -15,7 +17,9 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
     
     public void initialize(IWorkbenchConfigurer configurer) {
         super.initialize(configurer);
-        configurer.setSaveAndRestore(true);
+        //修改为弧形标题栏
+        configurer.setSaveAndRestore(false);
+        PlatformUI.getPreferenceStore().setValue(IWorkbenchPreferenceConstants.SHOW_TRADITIONAL_STYLE_TABS,false);
     }
 
 	public String getInitialWindowPerspectiveId() {
